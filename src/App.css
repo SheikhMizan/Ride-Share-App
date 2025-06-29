@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom styles */
+.ride-card {
+  transition: transform 0.2s ease;
+}
+.ride-card:hover {
+  transform: translateY(-2px);
+}

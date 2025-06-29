@@ -1,0 +1,57 @@
+/* src/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern base styles */
+body {
+  @apply bg-gray-50 font-sans text-gray-800 antialiased;
+}
+
+/* Custom components */
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200;
+}
+
+.btn-secondary {
+  @apply border border-blue-500 text-blue-500 font-medium py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors duration-200;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-sm overflow-hidden transition-all duration-200 hover:shadow-md;
+}
+
+.input-field {
+  @apply w-full bg-gray-100 rounded-lg py-3 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:bg-white transition-all;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadein {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Service selector hover effect */
+.service-card {
+  @apply flex flex-col items-center p-4 rounded-xl transition-all duration-200;
+}
+
+.service-card:hover {
+  @apply transform scale-105 shadow-md;
+}
+
+/* Header styling */
+.header {
+  @apply bg-white shadow-sm sticky top-0 z-10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .service-grid {
+    @apply grid-cols-2 gap-3;
+  }
+}
